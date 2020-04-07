@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nota de aluno</title>
+</head>
+<body>
+<script>
+    //declaração de variaveis 
+    var nome = prompt("digite seu nome")
+
+    var nota1 = prompt("digite sua primeira nota")
+    if(nota1 > 100){
+        alert("nota acima do valor esperado, digite novamente")
+        var nota1 = prompt("digite sua primeira nota")
+    }
+    var nota2 = prompt("digite a sua segunda nota")
+    if(nota2 >100){
+        alert("nota acima do valor esperado, digite novamente")
+        var nota2 = prompt("digite a sua segunda nota")
+    }
+    var nota3 = prompt("digite a seu tercaira nota")
+    if(nota3 > 100){
+        alert("nota acima do valor esperado, digite novamente")
+        var nota3 = prompt("digite a seu tercaira nota")
+    }
+    var media = null
+    //conversão de tipos
+    nota1 =  parseInt(nota1)
+    nota2 =  parseInt(nota2)
+    nota3 = parseInt(nota3)
+    //execução
+    media = (nota1+nota2+nota3)/3
+
+    if (media>=60 && media <= 70){
+        document.write("<h1>Olá "+nome+" sua media é "+media+", e você passou na tábua da berada</h1>")
+    }if( media <= 61){
+        document.write("<h1>Olá "+nome+" sua media é "+media+", e você está reprovado</h1>")
+    }if( media >=71 && media <= 100){
+        document.write("<h1>Olá "+nome+" sua media é "+media+", parabéns você foi muito bem</h1>")
+    }
+
+</script>
+</body>
+</html>
